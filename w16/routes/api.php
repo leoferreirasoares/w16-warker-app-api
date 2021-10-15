@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Cidades;
-use App\Http\Controllers\Postos;
+use App\Http\Controllers\CidadesController;
+use App\Http\Controllers\PostosController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,5 +15,11 @@ use App\Http\Controllers\Postos;
 |
 */
 
-Route::get('/cidade/{id}', [Cidades::class,'show'])->name('cidades.show');
-Route::get('/posto/{id}', [Postos::class,'show'])->name('postos.show');
+/*Route::get('/cidade/{id}', [Cidades::class,'show'])->name('cidades.show');
+Route::get('/posto/{id}', [Postos::class,'show'])->name('postos.show');*/
+Route::apiResources([
+    'posto' => CidadesController::class,
+    'cidade' => PostosController::class,
+    
+]
+);

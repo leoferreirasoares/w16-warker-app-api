@@ -15,7 +15,7 @@ class Cidade extends Migration
     {
         Schema::create('cidades', function (Blueprint $table) {
             $table->increments('id', 11);
-            $table->string('nome_da_cidade', 128);
+            $table->string('nome_da_cidade', 50);
             $table->double('latitude',8,2);
             $table->double('longitude',8,2);
             $table->timestamps();

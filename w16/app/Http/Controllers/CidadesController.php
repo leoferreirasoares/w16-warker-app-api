@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 use App\Models\Cidades;
 use Illuminate\Http\Request;
 
-class Cidades extends Controller
+class CidadesController extends Controller
 {
+    public function index()
+    {
+        $response = Cidades::all();
+        return response()->json($response);
+    }
    
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         try {

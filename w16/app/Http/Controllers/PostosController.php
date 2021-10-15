@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Postos;
 use Illuminate\Http\Request;
 
-class Postos extends Controller
+class PostosController extends Controller
 {
+    public function index()
+    {
+        $response = Postos::all();
+        return response()->json($response);
+    }
     public function show($id)
     {
         try {
