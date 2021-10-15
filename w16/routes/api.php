@@ -18,8 +18,8 @@ use App\Http\Controllers\PostosController;
 /*Route::get('/cidade/{id}', [Cidades::class,'show'])->name('cidades.show');
 Route::get('/posto/{id}', [Postos::class,'show'])->name('postos.show');*/
 Route::apiResources([
-    'posto' => CidadesController::class,
-    'cidade' => PostosController::class,
+    'posto' => PostosController::class,
+    'cidade' => CidadesController::class,
     
 ]
 );
